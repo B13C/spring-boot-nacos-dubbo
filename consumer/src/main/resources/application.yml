@@ -1,0 +1,15 @@
+server:
+  port: 3030
+  servlet:
+    context-path: /consumer
+
+dubbo:
+  registry:
+    address: nacos://127.0.0.1:8848
+    parameters: {namespace: 254cd78f-885d-4f05-b88d-bee895b7f0e9}
+  scan:
+    base-packages: com.geoxus.service
+  protocol:
+    name: dubbo
+  application:
+    name: consumer-dubbo-consumer
