@@ -1,6 +1,7 @@
-package com.geoxus.service;
+package com.geoxus.service.impl;
 
 import com.geoxus.entities.UserAddress;
+import com.geoxus.service.IUserService;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.springframework.stereotype.Component;
 
