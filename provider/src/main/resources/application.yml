@@ -4,7 +4,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       db-type: mysql
-      url: jdbc:p6spy:mysql://127.0.0.1:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false
+      url: jdbc:p6spy:mysql://192.168.56.101:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false
       username: britton
       password: britton
       initial-size: 5
@@ -55,8 +55,8 @@ mybatis-plus:
 
 dubbo:
   registry:
-    address: spring-cloud://192.168.1.103:8848
-    parameters: { namespace: 254cd78f-885d-4f05-b88d-bee895b7f0e9 }
+    address: nacos://192.168.1.103:8848
+    parameters: { namespace: 254cd78f-885d-4f05-b88d-bee895b7f0e9, group: GX_GROUP, id: provider }
   scan:
     base-packages: com.geoxus.service
   application:
@@ -70,9 +70,9 @@ dubbo:
     timeout: 5000
     check: false
     retries: 0
-  cloud:
-    subscribed-services:
-
+  provider:
+    timeout: 5000
+    retries: 0
 
 nacos:
   config:
