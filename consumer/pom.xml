@@ -88,17 +88,53 @@
     <build>
         <plugins>
             <plugin>
+                <!-- 启动时 命令   java -Dloader.path="lib目录" -jar xxx.jar -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <classifier>exec</classifier>
+                    <mainClass>com.geoxus.ConsumerApplication</mainClass>
+                    <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+                    <!--<classifier>exec</classifier>-->
+                    <layout>ZIP</layout>
                     <fork>true</fork>
+                    <!--配置需要打包进项目的jar-->
+                    <includes>
+                        <!--这里是填写需要包含进去的jar，
+                        	必须项目中的某些模块，会经常变动，那么就应该将其坐标写进来
+                        	如果没有则non-exists ，表示不打包依赖
+                        -->
+                        <include>
+                            <!--排除所有JAR-->
+                            <groupId>nothing</groupId>
+                            <artifactId>nothing</artifactId>
+                        </include>
+                    </includes>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
                             <goal>repackage</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--此插件用于将依赖包抽出-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <excludeTransitive>false</excludeTransitive>
+                            <stripVersion>false</stripVersion>
+                            <includeScope>runtime</includeScope>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
