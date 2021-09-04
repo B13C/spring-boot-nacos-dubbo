@@ -29,7 +29,6 @@
         <nacos.client.version>1.4.2</nacos.client.version>
         <protobuf.java.version>3.17.3</protobuf.java.version>
         <nacos-config-spring-boot.version>0.2.9</nacos-config-spring-boot.version>
-        <mysql.version>8.0.25</mysql.version>
         <druid.spring.boot.version>1.2.5</druid.spring.boot.version>
         <mybatis.plus.boot.version>3.4.2</mybatis.plus.boot.version>
         <p6spy.version>3.9.1</p6spy.version>
@@ -37,6 +36,7 @@
         <hutool.version>5.7.10</hutool.version>
         <swagger.version>2.9.2</swagger.version>
         <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
+        <spring-boot-dependencies.version>2.3.12.RELEASE</spring-boot-dependencies.version>
     </properties>
 
     <dependencyManagement>
@@ -44,7 +44,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.3.12.RELEASE</version>
+                <version>${spring-boot-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -144,7 +144,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
