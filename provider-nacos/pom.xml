@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>provider</artifactId>
+    <artifactId>provider-nacos</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -76,7 +76,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.geoxus.ProviderApplication</mainClass>
+                    <mainClass>com.geoxus.ProviderNacosApplication</mainClass>
                     <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
                     <!--<classifier>exec</classifier>-->
                     <layout>ZIP</layout>
