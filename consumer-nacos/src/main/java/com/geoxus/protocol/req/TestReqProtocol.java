@@ -1,6 +1,6 @@
 package com.geoxus.protocol.req;
 
-import com.geoxus.framework.protocol.GXBaseReqProtocol;
+import com.geoxus.framework.dto.protocol.GXBaseReqProtocol;
 import lombok.Data;
 
 @Data

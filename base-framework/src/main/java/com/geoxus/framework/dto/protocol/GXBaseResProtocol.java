@@ -1,4 +1,4 @@
-package com.geoxus.framework.protocol;
+package com.geoxus.framework.dto.protocol;
 
 public interface GXBaseResProtocol {
     /**
