@@ -3,7 +3,7 @@ package com.geoxus.framework.protocol;
 public interface GXBaseResProtocol {
     /**
      * @author britton
-     * 对参数的补充修复
+     * 对返回数据进行自定义处理
      */
     default <T> T processRetValue() {
         return null;
