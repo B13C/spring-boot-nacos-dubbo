@@ -1,5 +1,9 @@
 package com.geoxus.framework.dto.protocol;
 
+/**
+ * 用于接收用户请求信息
+ * 并对请求信息进行一些额外处理
+ */
 public interface GXBaseReqProtocol {
     /**
      * @author britton
