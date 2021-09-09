@@ -61,3 +61,14 @@ dubbo:
     address: zookeeper://127.0.0.1:2181
   application:
     name: provider-zk
+
+
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+    auto-refresh: true
+    bootstrap:
+      enable: true  # 需要配置data-id 和 type  否则会报错
+    data-id: britton.test.yml
+    type: yaml
+    namespace: d937e439-cac3-4004-8f13-b88fbe0bcd56  # 需要设置  否则不能自动更新
