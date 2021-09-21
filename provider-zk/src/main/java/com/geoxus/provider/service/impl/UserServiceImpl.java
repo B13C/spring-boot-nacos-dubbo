@@ -1,8 +1,8 @@
-package com.geoxus.service.impl;
+package com.geoxus.provider.service.impl;
 
 import com.geoxus.dto.UserAddressResDto;
 import com.geoxus.entities.UserAddress;
-import com.geoxus.mapstruct.UserAddressMapStruct;
+import com.geoxus.provider.mapstruct.UserAddressMapStruct;
 import com.geoxus.service.IUserService;
 import org.apache.dubbo.config.annotation.DubboService;
 

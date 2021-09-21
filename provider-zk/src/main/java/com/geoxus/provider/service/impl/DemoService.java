@@ -1,4 +1,4 @@
-package com.geoxus.service.impl;
+package com.geoxus.provider.service.impl;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.geoxus.service.IDemoService;

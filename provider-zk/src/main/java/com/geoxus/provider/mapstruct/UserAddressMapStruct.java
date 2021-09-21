@@ -1,4 +1,4 @@
-package com.geoxus.mapstruct;
+package com.geoxus.provider.mapstruct;
 
 import com.geoxus.dto.UserAddressResDto;
 import com.geoxus.entities.UserAddress;
