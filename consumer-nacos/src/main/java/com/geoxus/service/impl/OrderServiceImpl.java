@@ -1,6 +1,6 @@
 package com.geoxus.service.impl;
 
-import com.geoxus.entities.UserAddress;
+import com.geoxus.dto.UserAddressResDto;
 import com.geoxus.service.IOrderService;
 import com.geoxus.service.IUserService;
 import org.apache.dubbo.config.annotation.DubboReference;
@@ -16,11 +16,11 @@ public class OrderServiceImpl implements IOrderService {
     private IUserService userService;
 
     @Override
-    public List<UserAddress> initOrder(String userId) {
+    public List<UserAddressResDto> initOrder(String userId) {
         System.out.println("用户ID为 : " + userId);
-        List<UserAddress> addressList = userService.getUserAddressList(userId);
-        for (UserAddress userAddress : addressList) {
-            System.out.println(userAddress.getUserAddress());
+        List<UserAddressResDto> addressList = userService.getUserAddressList(userId);
+        for (UserAddressResDto userAddress : addressList) {
+            System.out.println(userAddress.getUserAddress01());
         }
         return addressList;
     }

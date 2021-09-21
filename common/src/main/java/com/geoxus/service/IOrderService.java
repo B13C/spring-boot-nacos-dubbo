@@ -1,5 +1,6 @@
 package com.geoxus.service;
 
+import com.geoxus.dto.UserAddressResDto;
 import com.geoxus.entities.UserAddress;
 
 import java.util.List;
@@ -11,5 +12,5 @@ public interface IOrderService {
      * @param userId 用户ID
      * @return List
      */
-    List<UserAddress> initOrder(String userId);
+    List<UserAddressResDto> initOrder(String userId);
 }

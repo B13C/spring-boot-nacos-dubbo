@@ -61,6 +61,9 @@ dubbo:
     address: zookeeper://127.0.0.1:2181
   application:
     name: provider-zk
+    protocol: dubbo
+  protocol:
+    name: dubbo
 
 
 nacos:

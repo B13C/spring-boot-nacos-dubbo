@@ -32,11 +32,12 @@
         <nacos-config-spring-boot.version>0.2.10</nacos-config-spring-boot.version>
         <druid.spring.boot.version>1.2.6</druid.spring.boot.version>
         <!--<mybatis.plus.boot.version>3.4.3.3</mybatis.plus.boot.version>-->
-        <mybatis.plus.boot.version>3.4.3.3</mybatis.plus.boot.version>
+        <mybatis.plus.boot.version>3.4.3.1</mybatis.plus.boot.version>
         <p6spy.version>3.9.1</p6spy.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
         <hutool.version>5.7.10</hutool.version>
         <swagger.version>2.9.2</swagger.version>
+        <lombok.version>1.18.20</lombok.version>
         <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
         <spring-boot-dependencies.version>2.3.12.RELEASE</spring-boot-dependencies.version>
     </properties>
