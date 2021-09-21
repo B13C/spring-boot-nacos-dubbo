@@ -11,6 +11,6 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 @Component
 public interface UserAddressMapStruct {
-    @Mapping(source = "userAddress" , target = "userAddress01")
+    @Mapping(source = "userAddress", target = "userAddress01")
     List<UserAddressResDto> entitiesToDto(List<UserAddress> users);
 }

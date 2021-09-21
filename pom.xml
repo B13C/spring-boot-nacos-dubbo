@@ -16,7 +16,7 @@
     </parent>
 
     <modules>
-        <module>common</module>
+        <module>common-api</module>
         <module>base-framework</module>
         <module>provider-nacos</module>
         <module>consumer-nacos</module>
