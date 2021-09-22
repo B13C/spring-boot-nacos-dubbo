@@ -1,3 +1,4 @@
+# Spring的配置,可以配置到nacos中,使用nacos来管理
 spring:
   datasource:
     driverClassName: com.p6spy.engine.spy.P6SpyDriver
@@ -33,6 +34,7 @@ spring:
         login-username: admin
         login-password: admin123
 
+# Mybatis Plus的配置,可以配置到nacos中,使用nacos来管理
 mybatis-plus:
   mapper-locations: classpath:/mappers/*Mapper.xml
   type-aliases-package: com.geoxus
@@ -53,6 +55,7 @@ mybatis-plus:
     aggressive-lazy-loading: false
     lazy-loading-enabled: true
 
+# dubbo的配置,可以配置到nacos中,使用nacos来管理
 dubbo:
   registry:
     address: nacos://192.168.1.103:8848
@@ -73,7 +76,7 @@ dubbo:
   provider:
     timeout: 5000
     retries: 0
-
+# 以下关于nacos的配置信息必须配置到application.yml文件中 , 以上信息可以配置到nacos中 , 使用nacos来管理
 nacos:
   config:
     server-addr: 127.0.0.1:8848

@@ -1,3 +1,4 @@
+# Spring的配置,可以配置到nacos中,使用nacos来管理
 spring:
   datasource:
     driver-class-name: com.p6spy.engine.spy.P6SpyDriver
@@ -39,6 +40,7 @@ spring:
   profiles:
     active: dev
 
+# Mybatis Plus的配置,可以配置到nacos中,使用nacos来管理
 mybatis-plus:
   mapper-locations: classpath:/mappers/*Mapper.xml
   type-aliases-package: com.geoxus
@@ -61,6 +63,7 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     auto-mapping-behavior: full
 
+# dubbo的配置,可以配置到nacos中,使用nacos来管理
 dubbo:
   registry:
     address: nacos://127.0.0.1:8848
@@ -75,7 +78,7 @@ dubbo:
     name: dubbo
   application:
     name: consumer-dubbo-consumer
-
+# 以下关于nacos的配置信息必须配置到application.yml文件中 , 以上信息可以配置到nacos中 , 使用nacos来管理
 nacos:
   config:
     server-addr: 127.0.0.1:8848
