@@ -1,7 +1,6 @@
 package com.geoxus.controller;
 
 import com.geoxus.dto.UserAddressResDto;
-import com.geoxus.entities.UserAddress;
 import com.geoxus.mapstruct.UserAddressMapStruct;
 import com.geoxus.service.IDemoService;
 import com.geoxus.service.IUserService;
@@ -30,7 +29,6 @@ public class HelloController {
 
     @GetMapping("user-list")
     public List<UserAddressResDto> getUserList() {
-        List<UserAddressResDto> addressList = userService.getUserAddressList("1");
-        return addressList;
+        return userService.getUserAddressList("1");
     }
 }
