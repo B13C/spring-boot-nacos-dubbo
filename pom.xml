@@ -37,7 +37,7 @@
         <hutool.version>5.7.10</hutool.version>
         <swagger.version>2.9.2</swagger.version>
         <lombok.version>1.18.20</lombok.version>
-        <nacos-config-spring-boot.version>0.2.11</nacos-config-spring-boot.version>
+        <nacos-config-spring-boot.version>0.2.10</nacos-config-spring-boot.version>
         <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
         <spring-boot-dependencies.version>2.3.12.RELEASE</spring-boot-dependencies.version>
     </properties>
