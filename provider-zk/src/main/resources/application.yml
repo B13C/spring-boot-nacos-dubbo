@@ -7,7 +7,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       db-type: mysql
-      url: jdbc:p6spy:mysql://127.0.0.1:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false
+      url: jdbc:p6spy:mysql://192.168.56.101:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf8&tinyInt1isBit=false
       username: britton
       password: britton
       initial-size: 5
@@ -58,7 +58,7 @@ mybatis-plus:
 
 dubbo:
   registry:
-    address: zookeeper://192.168.1.104:2181
+    address: zookeeper://127.0.0.1:2181
   application:
     name: provider-zk
     protocol: dubbo
@@ -70,7 +70,7 @@ dubbo:
 
 nacos:
   config:
-    server-addr: 192.168.1.104:8848
+    server-addr: 47.108.213.62:8848
     auto-refresh: true
     bootstrap:
       enable: true  # 需要配置data-id 和 type  否则会报错
