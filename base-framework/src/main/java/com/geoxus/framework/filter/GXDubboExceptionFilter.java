@@ -1,13 +1,11 @@
 package com.geoxus.framework.filter;
 
 import com.geoxus.framework.exception.GXBusinessException;
-import com.geoxus.framework.service.GXBusinessService;
 import org.apache.dubbo.common.constants.CommonConstants;
 import org.apache.dubbo.common.extension.Activate;
 import org.apache.dubbo.common.logger.Logger;
 import org.apache.dubbo.common.logger.LoggerFactory;
 import org.apache.dubbo.common.utils.ReflectUtils;
-import org.apache.dubbo.common.utils.StringUtils;
 import org.apache.dubbo.rpc.*;
 import org.apache.dubbo.rpc.filter.ExceptionFilter;
 import org.apache.dubbo.rpc.service.GenericService;
@@ -65,7 +63,7 @@ public class GXDubboExceptionFilter extends ExceptionFilter {
                 }
 
                 // otherwise, wrap with RuntimeException and throw back to the client
-                appResponse.setException(new RuntimeException(StringUtils.toString(exception)));
+                appResponse.setException(exception);
             } catch (Throwable e) {
                 logger.warn("Fail to ExceptionFilter when called by " + RpcContext.getServiceContext().getRemoteHost() + ". service: " + invoker.getInterface().getName() + ", method: " + invocation.getMethodName() + ", exception: " + e.getClass().getName() + ": " + e.getMessage(), e);
             }
